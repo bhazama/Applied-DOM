@@ -77,7 +77,7 @@
    * to set the context to the correct object
    */
    btn2.addEventListener("click", () => {
-    setMyLightGreen.apply(this.document.activeElement);
+    setMyLightGreen.apply(btn2);
    });
 
   /*
@@ -111,7 +111,7 @@
    *   and passing two aditional arguments, event and 'light-green'
    */
    btn5.addEventListener("click", (event) =>{
-    setMyLightClass.apply(this.document.activeElement,[event, "light-green"]);
+    setMyLightClass.apply(btn5,[event, "light-green"]);
    });
 
   /*
@@ -134,7 +134,7 @@
    * using the Function prototype method: call
    * to set the context to the correct object
    */
-   btn7.addEventListener("click",(event)=>{
+   btn7.addEventListener("click",() =>{
     setMyLightGreen.call(this.document.activeElement);
    });
 
@@ -163,7 +163,7 @@
    *   and passing two aditional arguments, event and 'light-green'
    */
    btn9.addEventListener("click", (event) =>{
-    setMyLightClass.call(this.document.activeElement, event, "light-green");
+    setMyLightClass.call(event.target, event, "light-green");
    });
 
   /*
